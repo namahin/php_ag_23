@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Expense extends Model
 {
+    protected $fillable = [
+        'date',
+        'amount',
+        'category',
+        'description',
+        'user_id',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
